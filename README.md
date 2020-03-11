@@ -19,4 +19,24 @@
 - npm（Node Package Manager）
 https://nodejs.org/en/ にて LTSの方をダウンロード → インストール
 
-## 基本設定
+## プラグイン作成
+```
+1. プラグインテンプレートダウンロード
+https://github.dev.cybozu.co.jp/system-planning/plugin-template 
+
+プロジェクトディレクトリに移動（今回はplugin-template）
+$ cd プロジェクトディレクトリ
+
+2. 必要なライブラリをインストール(package.jsonに記載されている情報を元に)
+$ npm install
+
+3. プラグインをパッケージング
+$ kintone-plugin-packer src
+
+4. プロジェクトディレクトリに作成された秘密鍵の名前の変更（webpack.config.jsに記載されたprivateKeyPathを元にplugin.zipを作成するため）
+~.ppkを「private.ppk」に変更
+
+5. webpackを使ったplugin.zipの作成
+$ npm run build
+
+```
