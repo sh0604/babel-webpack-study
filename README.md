@@ -27,7 +27,7 @@ https://github.dev.cybozu.co.jp/system-planning/plugin-template
 プロジェクトディレクトリに移動（今回はplugin-template）
 $ cd プロジェクトディレクトリ
 
-2. 必要なライブラリをインストール(package.jsonに記載されている情報を元に)
+2. 必要なライブラリをインストール(package.jsonの内容を元にnode modulesに取り込む)
 $ npm install
 
 3. プラグインをパッケージング
@@ -36,7 +36,7 @@ $ kintone-plugin-packer src
 4. プロジェクトディレクトリに作成された秘密鍵の名前変更（webpack.config.jsに記載されたprivateKeyPathを元にplugin.zipを作成するため）
 ~.ppkを「private.ppk」に変更
 
-5. webpackを使ったplugin.zipの作成
+5. webpackを使ったplugin.zipの作成(webpack.config.jsの内容を元にpluginを作成)
 $ npm run build
 
 ```
