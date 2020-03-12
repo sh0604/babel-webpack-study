@@ -39,4 +39,7 @@ $ kintone-plugin-packer src
 5. webpackを使ったplugin.zipの作成(webpack.config.jsの内容を元にpluginを作成)
 $ npm run build
 
+6. pluginのアップロード
+$ npm start
+
 ```
