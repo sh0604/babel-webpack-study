@@ -16,10 +16,10 @@
 ![スクリーンショット 2020-03-11 14 30 11](https://user-images.githubusercontent.com/36327504/76385609-744a4700-63a5-11ea-891e-43d06c07f206.png)
 
 ## 用意するもの
-- npm（Node Package Manager）
+- npm（Node Package Manager）・・・パッケージ管理コマンド  
 https://nodejs.org/en/ にて LTSの方をダウンロード → インストール
 
-## プラグイン作成
+## プラグイン作成流れ
 ```
 1. プラグインテンプレートダウンロード
 https://github.dev.cybozu.co.jp/system-planning/plugin-template 
@@ -33,7 +33,7 @@ $ npm install
 3. プラグインをパッケージング
 $ kintone-plugin-packer src
 
-4. プロジェクトディレクトリに作成された秘密鍵の名前の変更（webpack.config.jsに記載されたprivateKeyPathを元にplugin.zipを作成するため）
+4. プロジェクトディレクトリに作成された秘密鍵の名前変更（webpack.config.jsに記載されたprivateKeyPathを元にplugin.zipを作成するため）
 ~.ppkを「private.ppk」に変更
 
 5. webpackを使ったplugin.zipの作成
